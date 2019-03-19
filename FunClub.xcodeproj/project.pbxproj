@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		FA8325292241559C009FB562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325282241559C009FB562 /* AppDelegate.swift */; };
 		FA83252B2241559C009FB562 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83252A2241559C009FB562 /* ViewController.swift */; };
-		FA83252E2241559C009FB562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA83252C2241559C009FB562 /* Main.storyboard */; };
 		FA832530224155A1009FB562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83252F224155A1009FB562 /* Assets.xcassets */; };
 		FA832533224155A1009FB562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA832531224155A1009FB562 /* LaunchScreen.storyboard */; };
 		FA83253E224155A1009FB562 /* FunClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83253D224155A1009FB562 /* FunClubTests.swift */; };
+		FA83254C224160F4009FB562 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83254B224160F4009FB562 /* ListViewController.swift */; };
+		FA83254E22416105009FB562 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA83254D22416105009FB562 /* ListViewController.xib */; };
+		FA8325512241620F009FB562 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325502241620F009FB562 /* AppRouter.swift */; };
+		FA8325532241621C009FB562 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325522241621C009FB562 /* AppContainer.swift */; };
+		FA8325552241626F009FB562 /* ListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325542241626F009FB562 /* ListViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +33,17 @@
 		FA8325252241559C009FB562 /* FunClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8325282241559C009FB562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA83252A2241559C009FB562 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA83252D2241559C009FB562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA83252F224155A1009FB562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA832532224155A1009FB562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA832534224155A1009FB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA832539224155A1009FB562 /* FunClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA83253D224155A1009FB562 /* FunClubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunClubTests.swift; sourceTree = "<group>"; };
 		FA83253F224155A1009FB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA83254B224160F4009FB562 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		FA83254D22416105009FB562 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		FA8325502241620F009FB562 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		FA8325522241621C009FB562 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		FA8325542241626F009FB562 /* ListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +85,9 @@
 		FA8325272241559C009FB562 /* FunClub */ = {
 			isa = PBXGroup;
 			children = (
-				FA8325282241559C009FB562 /* AppDelegate.swift */,
+				FA83254F224161CC009FB562 /* App */,
+				FA832548224160C2009FB562 /* Scenes */,
 				FA83252A2241559C009FB562 /* ViewController.swift */,
-				FA83252C2241559C009FB562 /* Main.storyboard */,
 				FA83252F224155A1009FB562 /* Assets.xcassets */,
 				FA832531224155A1009FB562 /* LaunchScreen.storyboard */,
 				FA832534224155A1009FB562 /* Info.plist */,
@@ -94,6 +102,42 @@
 				FA83253F224155A1009FB562 /* Info.plist */,
 			);
 			path = FunClubTests;
+			sourceTree = "<group>";
+		};
+		FA832548224160C2009FB562 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FA832549224160CB009FB562 /* ListView */,
+				FA83254A224160DB009FB562 /* DetailPage */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FA832549224160CB009FB562 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				FA83254B224160F4009FB562 /* ListViewController.swift */,
+				FA83254D22416105009FB562 /* ListViewController.xib */,
+				FA8325542241626F009FB562 /* ListViewBuilder.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		FA83254A224160DB009FB562 /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailPage;
+			sourceTree = "<group>";
+		};
+		FA83254F224161CC009FB562 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325282241559C009FB562 /* AppDelegate.swift */,
+				FA8325502241620F009FB562 /* AppRouter.swift */,
+				FA8325522241621C009FB562 /* AppContainer.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +223,7 @@
 			files = (
 				FA832533224155A1009FB562 /* LaunchScreen.storyboard in Resources */,
 				FA832530224155A1009FB562 /* Assets.xcassets in Resources */,
-				FA83252E2241559C009FB562 /* Main.storyboard in Resources */,
+				FA83254E22416105009FB562 /* ListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8325552241626F009FB562 /* ListViewBuilder.swift in Sources */,
+				FA8325512241620F009FB562 /* AppRouter.swift in Sources */,
 				FA83252B2241559C009FB562 /* ViewController.swift in Sources */,
+				FA8325532241621C009FB562 /* AppContainer.swift in Sources */,
 				FA8325292241559C009FB562 /* AppDelegate.swift in Sources */,
+				FA83254C224160F4009FB562 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +269,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FA83252C2241559C009FB562 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA83252D2241559C009FB562 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FA832531224155A1009FB562 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
