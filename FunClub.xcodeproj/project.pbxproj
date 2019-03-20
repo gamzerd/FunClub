@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C484D9EBB306183AD9CF0FE5 /* Pods_FunClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D7008DA00DB7FE1C98B109 /* Pods_FunClub.framework */; };
 		FA8325292241559C009FB562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325282241559C009FB562 /* AppDelegate.swift */; };
-		FA83252B2241559C009FB562 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83252A2241559C009FB562 /* ViewController.swift */; };
 		FA832530224155A1009FB562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83252F224155A1009FB562 /* Assets.xcassets */; };
 		FA832533224155A1009FB562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA832531224155A1009FB562 /* LaunchScreen.storyboard */; };
 		FA83253E224155A1009FB562 /* FunClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83253D224155A1009FB562 /* FunClubTests.swift */; };
@@ -17,6 +17,15 @@
 		FA8325512241620F009FB562 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325502241620F009FB562 /* AppRouter.swift */; };
 		FA8325532241621C009FB562 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325522241621C009FB562 /* AppContainer.swift */; };
 		FA8325552241626F009FB562 /* ListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325542241626F009FB562 /* ListViewBuilder.swift */; };
+		FA8325582241A6AB009FB562 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325572241A6AB009FB562 /* Service.swift */; };
+		FA83255A2241A6CB009FB562 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325592241A6CB009FB562 /* ServiceProtocol.swift */; };
+		FA83255E2241A707009FB562 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83255D2241A707009FB562 /* AppConstants.swift */; };
+		FA8325602241A8FE009FB562 /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83255F2241A8FE009FB562 /* DataSourceProtocol.swift */; };
+		FA8325632241ABD6009FB562 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325622241ABD6009FB562 /* SearchResponse.swift */; };
+		FA8325652241ABE4009FB562 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325642241ABE4009FB562 /* SearchRequest.swift */; };
+		FA8325692241AC7B009FB562 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325682241AC7B009FB562 /* Media.swift */; };
+		FA83256B2241B024009FB562 /* ItunesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83256A2241B024009FB562 /* ItunesDataSource.swift */; };
+		FB0FD7118C332D4CF1EF79C8 /* Pods_FunClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BE9159D20C735B755AF83 /* Pods_FunClubTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,9 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		141BE9159D20C735B755AF83 /* Pods_FunClubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunClubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46D7008DA00DB7FE1C98B109 /* Pods_FunClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2B49CED266AC4010D8E88C /* Pods-FunClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunClub.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunClub/Pods-FunClub.release.xcconfig"; sourceTree = "<group>"; };
+		7ED47496CD0167896C51DEC2 /* Pods-FunClubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunClubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunClubTests/Pods-FunClubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6133215F30EB75FCF1296AC /* Pods-FunClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunClub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunClub/Pods-FunClub.debug.xcconfig"; sourceTree = "<group>"; };
+		F82E91E73E94DAFBE5E5F63D /* Pods-FunClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunClubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunClubTests/Pods-FunClubTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA8325252241559C009FB562 /* FunClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8325282241559C009FB562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA83252A2241559C009FB562 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA83252F224155A1009FB562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA832532224155A1009FB562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA832534224155A1009FB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +58,14 @@
 		FA8325502241620F009FB562 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		FA8325522241621C009FB562 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		FA8325542241626F009FB562 /* ListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewBuilder.swift; sourceTree = "<group>"; };
+		FA8325572241A6AB009FB562 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FA8325592241A6CB009FB562 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		FA83255D2241A707009FB562 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FA83255F2241A8FE009FB562 /* DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
+		FA8325622241ABD6009FB562 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		FA8325642241ABE4009FB562 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		FA8325682241AC7B009FB562 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		FA83256A2241B024009FB562 /* ItunesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C484D9EBB306183AD9CF0FE5 /* Pods_FunClub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,18 +81,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0FD7118C332D4CF1EF79C8 /* Pods_FunClubTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2B8AABD1D4B264378A628A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6133215F30EB75FCF1296AC /* Pods-FunClub.debug.xcconfig */,
+				7B2B49CED266AC4010D8E88C /* Pods-FunClub.release.xcconfig */,
+				7ED47496CD0167896C51DEC2 /* Pods-FunClubTests.debug.xcconfig */,
+				F82E91E73E94DAFBE5E5F63D /* Pods-FunClubTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5BB37B7063F5014CC439D4B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46D7008DA00DB7FE1C98B109 /* Pods_FunClub.framework */,
+				141BE9159D20C735B755AF83 /* Pods_FunClubTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA83251C2241559C009FB562 = {
 			isa = PBXGroup;
 			children = (
+				FA8325662241AC5B009FB562 /* API */,
 				FA8325272241559C009FB562 /* FunClub */,
 				FA83253C224155A1009FB562 /* FunClubTests */,
 				FA8325262241559C009FB562 /* Products */,
+				4E2B8AABD1D4B264378A628A /* Pods */,
+				5BB37B7063F5014CC439D4B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,9 +132,9 @@
 		FA8325272241559C009FB562 /* FunClub */ = {
 			isa = PBXGroup;
 			children = (
+				FA83255B2241A6EA009FB562 /* Commons */,
 				FA83254F224161CC009FB562 /* App */,
 				FA832548224160C2009FB562 /* Scenes */,
-				FA83252A2241559C009FB562 /* ViewController.swift */,
 				FA83252F224155A1009FB562 /* Assets.xcassets */,
 				FA832531224155A1009FB562 /* LaunchScreen.storyboard */,
 				FA832534224155A1009FB562 /* Info.plist */,
@@ -140,6 +187,60 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		FA8325562241A692009FB562 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325612241AB9D009FB562 /* Model */,
+				FA8325572241A6AB009FB562 /* Service.swift */,
+				FA8325592241A6CB009FB562 /* ServiceProtocol.swift */,
+				FA83255F2241A8FE009FB562 /* DataSourceProtocol.swift */,
+				FA83256A2241B024009FB562 /* ItunesDataSource.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA83255B2241A6EA009FB562 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				FA83255C2241A6F4009FB562 /* Constants */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		FA83255C2241A6F4009FB562 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FA83255D2241A707009FB562 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FA8325612241AB9D009FB562 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325642241ABE4009FB562 /* SearchRequest.swift */,
+				FA8325622241ABD6009FB562 /* SearchResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA8325662241AC5B009FB562 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325672241AC66009FB562 /* Model */,
+				FA8325562241A692009FB562 /* Network */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FA8325672241AC66009FB562 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325682241AC7B009FB562 /* Media.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA832542224155A1009FB562 /* Build configuration list for PBXNativeTarget "FunClub" */;
 			buildPhases = (
+				682F6F24E9A06C0749E62D83 /* [CP] Check Pods Manifest.lock */,
 				FA8325212241559C009FB562 /* Sources */,
 				FA8325222241559C009FB562 /* Frameworks */,
 				FA8325232241559C009FB562 /* Resources */,
+				9148EC7831FBB21554A68928 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA832545224155A1009FB562 /* Build configuration list for PBXNativeTarget "FunClubTests" */;
 			buildPhases = (
+				2D0DAA36578182F46507AE63 /* [CP] Check Pods Manifest.lock */,
 				FA832535224155A1009FB562 /* Sources */,
 				FA832536224155A1009FB562 /* Frameworks */,
 				FA832537224155A1009FB562 /* Resources */,
+				3DF064CE36DC55EBC8F3E785 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,15 +341,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D0DAA36578182F46507AE63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunClubTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DF064CE36DC55EBC8F3E785 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FunClubTests/Pods-FunClubTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunClubTests/Pods-FunClubTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		682F6F24E9A06C0749E62D83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunClub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9148EC7831FBB21554A68928 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FunClub/Pods-FunClub-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FunClub/Pods-FunClub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA8325212241559C009FB562 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FA8325552241626F009FB562 /* ListViewBuilder.swift in Sources */,
+				FA83255E2241A707009FB562 /* AppConstants.swift in Sources */,
+				FA8325602241A8FE009FB562 /* DataSourceProtocol.swift in Sources */,
+				FA8325582241A6AB009FB562 /* Service.swift in Sources */,
+				FA8325692241AC7B009FB562 /* Media.swift in Sources */,
 				FA8325512241620F009FB562 /* AppRouter.swift in Sources */,
-				FA83252B2241559C009FB562 /* ViewController.swift in Sources */,
+				FA83256B2241B024009FB562 /* ItunesDataSource.swift in Sources */,
+				FA8325632241ABD6009FB562 /* SearchResponse.swift in Sources */,
+				FA83255A2241A6CB009FB562 /* ServiceProtocol.swift in Sources */,
 				FA8325532241621C009FB562 /* AppContainer.swift in Sources */,
+				FA8325652241ABE4009FB562 /* SearchRequest.swift in Sources */,
 				FA8325292241559C009FB562 /* AppDelegate.swift in Sources */,
 				FA83254C224160F4009FB562 /* ListViewController.swift in Sources */,
 			);
@@ -398,6 +611,7 @@
 		};
 		FA832543224155A1009FB562 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6133215F30EB75FCF1296AC /* Pods-FunClub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -415,6 +629,7 @@
 		};
 		FA832544224155A1009FB562 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B2B49CED266AC4010D8E88C /* Pods-FunClub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -432,6 +647,7 @@
 		};
 		FA832546224155A1009FB562 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED47496CD0167896C51DEC2 /* Pods-FunClubTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +668,7 @@
 		};
 		FA832547224155A1009FB562 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82E91E73E94DAFBE5E5F63D /* Pods-FunClubTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

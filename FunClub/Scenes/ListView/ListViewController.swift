@@ -7,8 +7,26 @@
 //
 
 import UIKit
+import RxSwift
 
 final class ListViewController: UIViewController {
+   
+    let dataSource = ItunesDataSource()
 
-
+    var disposeBag = DisposeBag()
+    
+    override func viewDidLoad() {
+        
+        dataSource.getSearchResult(term: "lost", country: "US", media: "all")
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { response in
+                print(response)
+            }, onError: {_ in
+                print("error")
+            }, onCompleted: {
+                print("completed")
+            }).disposed(by: self.disposeBag)
+        
+    }
+    
 }
