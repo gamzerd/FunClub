@@ -40,6 +40,7 @@
 		FA8325932246B768009FB562 /* MediaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8325922246B768009FB562 /* MediaDetailViewController.xib */; };
 		FA8325992246BEA2009FB562 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325982246BEA2009FB562 /* UITableViewExtensions.swift */; };
 		FA83259B2246BEB9009FB562 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83259A2246BEB9009FB562 /* UITableViewCellExtensions.swift */; };
+		FA83259D2246E08D009FB562 /* ItunesUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83259C2246E08D009FB562 /* ItunesUtility.swift */; };
 		FB0FD7118C332D4CF1EF79C8 /* Pods_FunClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BE9159D20C735B755AF83 /* Pods_FunClubTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		FA8325922246B768009FB562 /* MediaDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailViewController.xib; sourceTree = "<group>"; };
 		FA8325982246BEA2009FB562 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		FA83259A2246BEB9009FB562 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
+		FA83259C2246E08D009FB562 /* ItunesUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				FA83257E22459462009FB562 /* CheckInternet.swift */,
+				FA83259C2246E08D009FB562 /* ItunesUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				FA83255E2241A707009FB562 /* AppConstants.swift in Sources */,
 				FA8325992246BEA2009FB562 /* UITableViewExtensions.swift in Sources */,
 				FA8325822245ACB4009FB562 /* UICollectionViewCellExtensions.swift in Sources */,
+				FA83259D2246E08D009FB562 /* ItunesUtility.swift in Sources */,
 				FA8325602241A8FE009FB562 /* DataSourceProtocol.swift in Sources */,
 				FA8325582241A6AB009FB562 /* Service.swift in Sources */,
 				FA8325692241AC7B009FB562 /* Media.swift in Sources */,

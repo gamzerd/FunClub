@@ -11,13 +11,13 @@ import Foundation
 class Media: Codable {
     
     var wrapperType: String = ""
-    var artworkUrl60: String = ""
+    var artworkUrl100: String = ""
     
     init(wrapperType: String = "",
-         artworkUrl60:  String = "")
+         artworkUrl100:  String = "")
     {
         self.wrapperType = wrapperType
-        self.artworkUrl60 = artworkUrl60
+        self.artworkUrl100 = artworkUrl100
     }
 
 }

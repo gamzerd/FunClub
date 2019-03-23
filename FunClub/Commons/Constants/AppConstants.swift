@@ -15,7 +15,7 @@ struct AppConstants {
     }
     
     struct MediaCollection {
-        static let ImageRatio: Float = 3.0 / 2.0
+        static let ImageRatio: Float = 1.0 / 1.0
         static let NumberOfColumnsInGrid: Float = 2
         static let HorizontalSpaceBetweenItems: Float = 8
         static let VerticleSpaceBetweenItems: Float = 8

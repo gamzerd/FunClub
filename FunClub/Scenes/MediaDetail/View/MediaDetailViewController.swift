@@ -22,6 +22,6 @@ final class MediaDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel.getTitle()
-        mediaImageView.setImage(with: viewModel.media.artworkUrl60)
+        mediaImageView.setImage(with: viewModel.getImagePath())
     }
 }

@@ -21,6 +21,6 @@ class MediaListCollectionViewCell: UICollectionViewCell {
     
     func setup(with media: Media) {
         titleLabel.text = media.wrapperType
-        mediaImageView.setImage(with: media.artworkUrl60)
+        mediaImageView.setImage(with: ItunesUtility.getProperImageUrl(url: media.artworkUrl100, size: 200))
     }
 }

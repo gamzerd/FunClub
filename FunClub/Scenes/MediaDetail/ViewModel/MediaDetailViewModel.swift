@@ -29,7 +29,8 @@ final class MediaDetailViewModel: MediaDetailViewModelProtocol {
      */
     func getImagePath() -> String {
         
-        return media.artworkUrl60
+        // largest image size is 1400, but it is too large for the screen
+        return ItunesUtility.getProperImageUrl(url: media.artworkUrl100, size: 600)
     }
     
 }

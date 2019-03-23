@@ -11,8 +11,10 @@ import RxSwift
 
 final class MediaListViewModel: MediaListViewModelProtocol {
     
+    final var limit = 100
+    
     var list: [Media] = []
-        
+    
     // used to unsubscribe from RxSwift updates when deinit is called
     var disposeBag = DisposeBag()
     
@@ -50,7 +52,7 @@ final class MediaListViewModel: MediaListViewModelProtocol {
             viewDelegate?.showAlert(alertTitle: "Warning", alertMessage: "You are not connected to the internet!", buttonTitle: "Retry")
         }
         
-        dataSource.getSearchResult(term: "lost", country: "US", media: "all")
+        dataSource.getSearchResult(term: "lost", country: "US", media: "all", limit: limit)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { response in
                 self.list.append(contentsOf: response.results)
