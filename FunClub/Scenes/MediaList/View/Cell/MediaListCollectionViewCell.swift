@@ -9,7 +9,7 @@
 import UIKit
 
 class MediaListCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var mediaImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
@@ -21,6 +21,6 @@ class MediaListCollectionViewCell: UICollectionViewCell {
     
     func setup(with media: Media) {
         titleLabel.text = media.wrapperType
-        posterImageView.setImage(with: media.artworkUrl60)
+        mediaImageView.setImage(with: media.artworkUrl60)
     }
 }

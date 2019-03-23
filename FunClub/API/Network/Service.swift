@@ -12,23 +12,17 @@ class Service: ServiceProtocol {
     
     var url: String
     var defaultParams: [String:String]?
-    var decoder: JSONDecoder
+    var decoder = JSONDecoder()
     
     init(url: String, defaultParams: [String:String]) {
         self.url = url
         self.defaultParams = defaultParams
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = AppConstants.API.dateFormat
-        
-        decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
     }
     /**
      * Makes a GET http request to the given path and passes the result to the callback.
      * field values based on the corresponding rate value in the list.
      */
-    func get<E, D>(path: String, params: E, responseType: D.Type, callback: @escaping (D?, Error?) -> Void) where E: Encodable, D : Decodable {
+    func get<E, D>(path: String, params: E, callback: @escaping (D?, Error?) -> Void) where E: Encodable, D : Decodable {
         
         // build URL
         let endpoint = self.url + path
@@ -63,7 +57,7 @@ class Service: ServiceProtocol {
         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data else { return }
             do {
-                let decodedResponse = try self.decoder.decode(responseType, from: data)
+                let decodedResponse = try self.decoder.decode(D.self, from: data)
                 
                 // return result to the callback
                 callback(decodedResponse, nil)

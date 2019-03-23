@@ -33,7 +33,7 @@ class ItunesDataSource: DataSourceProtocol {
         let requestParams = SearchRequest(term: term, country: country, media: media)
         
         return Observable<SearchResponse>.create { observer in
-            self.api.get(path: "/search", params: requestParams, responseType: SearchResponse.self, callback:
+            self.api.get(path: "/search", params: requestParams, callback:
                 { (data: SearchResponse?, error: Error?) -> Void in
                     if error == nil {
                         observer.onNext(data!)

@@ -10,6 +10,6 @@ import Foundation
 
 protocol ServiceProtocol {
     
-    func get<E, D>(path: String, params: E, responseType: D.Type, callback: @escaping (D?, Error?) -> Void) where E: Encodable, D : Decodable
+    func get<E, D>(path: String, params: E, callback: @escaping (D?, Error?) -> Void) where E: Encodable, D : Decodable
     
 }

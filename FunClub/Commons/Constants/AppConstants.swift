@@ -12,9 +12,6 @@ struct AppConstants {
     
     struct API {
         static let baseUrl = "https://itunes.apple.com"
-        static let basePosterPath = "https://image.tmdb.org/t/p/w500"
-        static let baseThumbnailPath = "https://image.tmdb.org/t/p/w154"
-        static let dateFormat = "yyyy-MM-dd"
     }
     
     struct MediaCollection {

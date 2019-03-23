@@ -14,7 +14,7 @@ final class MediaListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: MediaListViewModelProtocol!
-  //  weak var delegate: ShowDetailsCoordinatorDelegate!
+    weak var delegate: ShowDetailsCoordinatorDelegate!
     
     convenience init(viewModel: MediaListViewModelProtocol) {
         self.init()
@@ -59,7 +59,7 @@ extension MediaListViewController: MediaListViewProtocol {
      * Opens detail page.
      */
     func openPage(media: Media) {
-      //  delegate.showDetails(media: media, fromViewController: self)
+        delegate.showDetails(media: media, fromViewController: self)
     }
     
 }

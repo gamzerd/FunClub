@@ -34,11 +34,11 @@ final class MediaListViewModel: MediaListViewModelProtocol {
     }
     
     /**
-     * Called when a row of the product list is selected.
+     * Called when a row of the media list is selected.
      * @param index: index of the selected section.
      */
     func didRowSelect(index: Int) {
-        //viewDelegate?.openPage(product: list[index])
+        viewDelegate?.openPage(media: list[index])
     }
     
     /**
@@ -77,8 +77,6 @@ final class MediaListViewModel: MediaListViewModelProtocol {
      */
     func didPressLong(index: Int) -> UIViewController {
         
-//        let detailViewModel = MediaDetailViewModel(product: list[index])
-//        return MediaDetailBuilder.make(with: detailViewModel)
-        return UIViewController()
+        return MediaDetailBuilder.make(with: list[index])
     }
 }

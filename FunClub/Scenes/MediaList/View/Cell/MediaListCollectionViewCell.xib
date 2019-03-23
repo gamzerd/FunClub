@@ -54,7 +54,7 @@
             <viewLayoutGuide key="safeArea" id="i4Q-gK-hfA"/>
             <size key="customSize" width="150" height="231"/>
             <connections>
-                <outlet property="posterImageView" destination="ZJF-Wt-g7f" id="FqG-jr-ba7"/>
+                <outlet property="mediaImageView" destination="ZJF-Wt-g7f" id="Cvs-pQ-Rz8"/>
                 <outlet property="titleLabel" destination="7vf-3h-RGN" id="bMU-2U-1Vw"/>
             </connections>
             <point key="canvasLocation" x="84" y="144"/>
