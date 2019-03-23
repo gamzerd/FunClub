@@ -10,8 +10,8 @@ import UIKit
 
 final class MediaDetailViewController: UIViewController {
         
-    @IBOutlet weak var mediaImageView: UIImageView!
-    
+    @IBOutlet weak var tableView: UITableView!
+
     var viewModel: MediaDetailViewModelProtocol!
     
     convenience init(viewModel: MediaDetailViewModelProtocol) {
@@ -22,6 +22,20 @@ final class MediaDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel.getTitle()
-        mediaImageView.setImage(with: viewModel.getImagePath())
+        tableView.register(MediaDetailTableViewCell.self)
+    }
+}
+
+extension MediaDetailViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MediaDetailTableViewCell.identifier) as! MediaDetailTableViewCell
+        cell.setup(with: viewModel.media)
+        
+        return cell
     }
 }
