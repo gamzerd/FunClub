@@ -6,7 +6,7 @@
 //  Copyright © 2019 gamzerd. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct AppConstants {
     
@@ -15,24 +15,42 @@ struct AppConstants {
     }
     
     struct MediaCollection {
-        static let ImageRatio: Float = 1.0 / 1.0
-        static let NumberOfColumnsInGrid: Float = 2
-        static let HorizontalSpaceBetweenItems: Float = 8
-        static let VerticleSpaceBetweenItems: Float = 8
-        static let CollectionSectionTitleHeight: Float = 40
+        
+        static let imageRatio: Float = 1.0 / 1.0
+        static let numberOfColumnsInHorizontalGrid: Float = 1
+        static let numberOfColumnsInVerticalGrid: Float = 2
+        static let horizontalSpaceBetweenItems: Float = 8
+        static let verticleSpaceBetweenItems: Float = 8
+        static let collectionSectionTitleHeight: Float = 40
         
         static func getItemWidth(from totalWidth: Float) -> Float {
-            return (totalWidth - AppConstants.MediaCollection.HorizontalSpaceBetweenItems * (NumberOfColumnsInGrid + 1)) / NumberOfColumnsInGrid
+            return (totalWidth - horizontalSpaceBetweenItems * (getNumberOfColumns() + 1)) / getNumberOfColumns()
+        }
+        
+        static func getNumberOfColumns() -> Float {
+            
+            switch UIDevice.current.orientation {
+            case .portrait:
+                return numberOfColumnsInVerticalGrid
+            case .portraitUpsideDown:
+                return numberOfColumnsInVerticalGrid
+            case .landscapeLeft:
+                return numberOfColumnsInHorizontalGrid
+            case .landscapeRight:
+                return numberOfColumnsInHorizontalGrid
+            default:
+                return numberOfColumnsInVerticalGrid
+            }
         }
         
         static func getItemHeight(from totalWidth: Float) -> Float {
             let itemWidth = getItemWidth(from: totalWidth)
-            return itemWidth * ImageRatio
+            return itemWidth * imageRatio
         }
         
         static func collectionHeight(from totalWidth: Float, itemCount: Int) -> Float {
-            let itemHeight = AppConstants.MediaCollection.getItemHeight(from: totalWidth) + VerticleSpaceBetweenItems
-            let rowCount = Float(itemCount) / AppConstants.MediaCollection.NumberOfColumnsInGrid
+            let itemHeight = getItemHeight(from: totalWidth) + verticleSpaceBetweenItems
+            let rowCount = Float(itemCount) / numberOfColumnsInVerticalGrid
             return itemHeight * rowCount
         }
     }

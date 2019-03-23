@@ -90,21 +90,21 @@ extension MediaListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = AppConstants.MediaCollection.getItemWidth(from: Float(collectionView.frame.width))
-        let height = width * AppConstants.MediaCollection.ImageRatio
+        let height = width * AppConstants.MediaCollection.imageRatio
         return CGSize(width: CGFloat(width), height: CGFloat(height))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(AppConstants.MediaCollection.VerticleSpaceBetweenItems)
+        return CGFloat(AppConstants.MediaCollection.verticleSpaceBetweenItems)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(AppConstants.MediaCollection.HorizontalSpaceBetweenItems) / 2
+        return CGFloat(AppConstants.MediaCollection.horizontalSpaceBetweenItems) / 2
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let leftMargin = CGFloat(AppConstants.MediaCollection.HorizontalSpaceBetweenItems)
-        let topMargin = CGFloat(AppConstants.MediaCollection.VerticleSpaceBetweenItems)
+        let leftMargin = CGFloat(AppConstants.MediaCollection.horizontalSpaceBetweenItems)
+        let topMargin = CGFloat(AppConstants.MediaCollection.verticleSpaceBetweenItems)
         return UIEdgeInsets(top: topMargin, left: leftMargin, bottom: topMargin, right: leftMargin)
     }
 }

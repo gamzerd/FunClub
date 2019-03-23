@@ -11,7 +11,7 @@ import RxSwift
 
 final class MediaListViewModel: MediaListViewModelProtocol {
     
-    final var limit = 100
+    let limit = 100
     
     var list: [Media] = []
     
