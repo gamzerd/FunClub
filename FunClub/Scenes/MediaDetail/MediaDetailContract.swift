@@ -13,7 +13,5 @@ protocol MediaDetailViewModelProtocol: class{
     var media: Media { get set }
     
     func getTitle() -> String
-    
-    func getImagePath() -> String
-    
+        
 }

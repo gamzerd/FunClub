@@ -9,7 +9,7 @@
 import Foundation
 
 final class MediaDetailViewModel: MediaDetailViewModelProtocol {
-    
+   
     var media: Media
     
     init(media: Media) {
@@ -22,15 +22,6 @@ final class MediaDetailViewModel: MediaDetailViewModelProtocol {
     func getTitle() -> String {
         
         return "Selected Item"
-    }
-    
-    /**
-     * Called to get image path.
-     */
-    func getImagePath() -> String {
-        
-        // largest image size is 1400, but it is too large for the screen
-        return ItunesUtility.getProperImageUrl(url: media.artworkUrl100, size: 600)
     }
     
 }
