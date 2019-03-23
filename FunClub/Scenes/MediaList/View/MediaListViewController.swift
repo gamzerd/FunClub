@@ -86,6 +86,29 @@ extension MediaListViewController: UICollectionViewDelegate {
     
 }
 
+extension MediaListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = AppConstants.MediaCollection.getItemWidth(from: Float(collectionView.frame.width))
+        let height = width * AppConstants.MediaCollection.ImageRatio
+        return CGSize(width: CGFloat(width), height: CGFloat(height))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(AppConstants.MediaCollection.VerticleSpaceBetweenItems)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(AppConstants.MediaCollection.HorizontalSpaceBetweenItems) / 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let leftMargin = CGFloat(AppConstants.MediaCollection.HorizontalSpaceBetweenItems)
+        let topMargin = CGFloat(AppConstants.MediaCollection.VerticleSpaceBetweenItems)
+        return UIEdgeInsets(top: topMargin, left: leftMargin, bottom: topMargin, right: leftMargin)
+    }
+}
+
 extension MediaListViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
