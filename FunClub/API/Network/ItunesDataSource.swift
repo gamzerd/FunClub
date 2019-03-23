@@ -28,15 +28,15 @@ class ItunesDataSource: DataSourceProtocol {
      * @param media: string media type, default: all
      * @return [Media]
      */
-    func getSearchResult(term: String, country: String, media: String) -> Observable<[Media]> {
+    func getSearchResult(term: String, country: String, media: String) -> Observable<SearchResponse> {
         
         let requestParams = SearchRequest(term: term, country: country, media: media)
         
-        return Observable<[Media]>.create { observer in
+        return Observable<SearchResponse>.create { observer in
             self.api.get(path: "/search", params: requestParams, responseType: SearchResponse.self, callback:
                 { (data: SearchResponse?, error: Error?) -> Void in
                     if error == nil {
-                        observer.onNext((data?.results)!)
+                        observer.onNext(data!)
                     } else {
                         observer.onError(error!)
                     }

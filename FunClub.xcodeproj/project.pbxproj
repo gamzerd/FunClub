@@ -12,11 +12,11 @@
 		FA832530224155A1009FB562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83252F224155A1009FB562 /* Assets.xcassets */; };
 		FA832533224155A1009FB562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA832531224155A1009FB562 /* LaunchScreen.storyboard */; };
 		FA83253E224155A1009FB562 /* FunClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83253D224155A1009FB562 /* FunClubTests.swift */; };
-		FA83254C224160F4009FB562 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83254B224160F4009FB562 /* ListViewController.swift */; };
-		FA83254E22416105009FB562 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA83254D22416105009FB562 /* ListViewController.xib */; };
+		FA83254C224160F4009FB562 /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83254B224160F4009FB562 /* MediaListViewController.swift */; };
+		FA83254E22416105009FB562 /* MediaListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA83254D22416105009FB562 /* MediaListViewController.xib */; };
 		FA8325512241620F009FB562 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325502241620F009FB562 /* AppRouter.swift */; };
 		FA8325532241621C009FB562 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325522241621C009FB562 /* AppContainer.swift */; };
-		FA8325552241626F009FB562 /* ListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325542241626F009FB562 /* ListViewBuilder.swift */; };
+		FA8325552241626F009FB562 /* MediaListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325542241626F009FB562 /* MediaListBuilder.swift */; };
 		FA8325582241A6AB009FB562 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325572241A6AB009FB562 /* Service.swift */; };
 		FA83255A2241A6CB009FB562 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325592241A6CB009FB562 /* ServiceProtocol.swift */; };
 		FA83255E2241A707009FB562 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83255D2241A707009FB562 /* AppConstants.swift */; };
@@ -25,6 +25,14 @@
 		FA8325652241ABE4009FB562 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325642241ABE4009FB562 /* SearchRequest.swift */; };
 		FA8325692241AC7B009FB562 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325682241AC7B009FB562 /* Media.swift */; };
 		FA83256B2241B024009FB562 /* ItunesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83256A2241B024009FB562 /* ItunesDataSource.swift */; };
+		FA83257022426FA7009FB562 /* MediaListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83256F22426FA7009FB562 /* MediaListCollectionViewCell.swift */; };
+		FA83257222426FC8009FB562 /* MediaListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA83257122426FC8009FB562 /* MediaListCollectionViewCell.xib */; };
+		FA83257422426FF4009FB562 /* MediaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83257322426FF4009FB562 /* MediaListViewModel.swift */; };
+		FA83257622427099009FB562 /* MediaListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83257522427099009FB562 /* MediaListContract.swift */; };
+		FA83257F22459462009FB562 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83257E22459462009FB562 /* CheckInternet.swift */; };
+		FA8325822245ACB4009FB562 /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325812245ACB4009FB562 /* UICollectionViewCellExtensions.swift */; };
+		FA8325842245ACCD009FB562 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325832245ACCC009FB562 /* UICollectionViewExtensions.swift */; };
+		FA8325862245AD0D009FB562 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325852245AD0D009FB562 /* UIImageViewExtensions.swift */; };
 		FB0FD7118C332D4CF1EF79C8 /* Pods_FunClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BE9159D20C735B755AF83 /* Pods_FunClubTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,11 +61,11 @@
 		FA832539224155A1009FB562 /* FunClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA83253D224155A1009FB562 /* FunClubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunClubTests.swift; sourceTree = "<group>"; };
 		FA83253F224155A1009FB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA83254B224160F4009FB562 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		FA83254D22416105009FB562 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		FA83254B224160F4009FB562 /* MediaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewController.swift; sourceTree = "<group>"; };
+		FA83254D22416105009FB562 /* MediaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListViewController.xib; sourceTree = "<group>"; };
 		FA8325502241620F009FB562 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		FA8325522241621C009FB562 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
-		FA8325542241626F009FB562 /* ListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewBuilder.swift; sourceTree = "<group>"; };
+		FA8325542241626F009FB562 /* MediaListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListBuilder.swift; sourceTree = "<group>"; };
 		FA8325572241A6AB009FB562 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FA8325592241A6CB009FB562 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		FA83255D2241A707009FB562 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -66,6 +74,14 @@
 		FA8325642241ABE4009FB562 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		FA8325682241AC7B009FB562 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		FA83256A2241B024009FB562 /* ItunesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesDataSource.swift; sourceTree = "<group>"; };
+		FA83256F22426FA7009FB562 /* MediaListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA83257122426FC8009FB562 /* MediaListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA83257322426FF4009FB562 /* MediaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewModel.swift; sourceTree = "<group>"; };
+		FA83257522427099009FB562 /* MediaListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListContract.swift; sourceTree = "<group>"; };
+		FA83257E22459462009FB562 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
+		FA8325812245ACB4009FB562 /* UICollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensions.swift; sourceTree = "<group>"; };
+		FA8325832245ACCC009FB562 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		FA8325852245AD0D009FB562 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +127,6 @@
 		FA83251C2241559C009FB562 = {
 			isa = PBXGroup;
 			children = (
-				FA8325662241AC5B009FB562 /* API */,
 				FA8325272241559C009FB562 /* FunClub */,
 				FA83253C224155A1009FB562 /* FunClubTests */,
 				FA8325262241559C009FB562 /* Products */,
@@ -132,6 +147,7 @@
 		FA8325272241559C009FB562 /* FunClub */ = {
 			isa = PBXGroup;
 			children = (
+				FA8325662241AC5B009FB562 /* API */,
 				FA83255B2241A6EA009FB562 /* Commons */,
 				FA83254F224161CC009FB562 /* App */,
 				FA832548224160C2009FB562 /* Scenes */,
@@ -154,20 +170,21 @@
 		FA832548224160C2009FB562 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				FA832549224160CB009FB562 /* ListView */,
+				FA832549224160CB009FB562 /* MediaList */,
 				FA83254A224160DB009FB562 /* DetailPage */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		FA832549224160CB009FB562 /* ListView */ = {
+		FA832549224160CB009FB562 /* MediaList */ = {
 			isa = PBXGroup;
 			children = (
-				FA83254B224160F4009FB562 /* ListViewController.swift */,
-				FA83254D22416105009FB562 /* ListViewController.xib */,
-				FA8325542241626F009FB562 /* ListViewBuilder.swift */,
+				FA83257522427099009FB562 /* MediaListContract.swift */,
+				FA8325542241626F009FB562 /* MediaListBuilder.swift */,
+				FA83256D22426F4A009FB562 /* ViewModel */,
+				FA83256C22426F3F009FB562 /* View */,
 			);
-			path = ListView;
+			path = MediaList;
 			sourceTree = "<group>";
 		};
 		FA83254A224160DB009FB562 /* DetailPage */ = {
@@ -202,6 +219,8 @@
 		FA83255B2241A6EA009FB562 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				FA8325802245AC83009FB562 /* Extensions */,
+				FA83257D22459446009FB562 /* Utilities */,
 				FA83255C2241A6F4009FB562 /* Constants */,
 			);
 			path = Commons;
@@ -239,6 +258,51 @@
 				FA8325682241AC7B009FB562 /* Media.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA83256C22426F3F009FB562 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA83254B224160F4009FB562 /* MediaListViewController.swift */,
+				FA83254D22416105009FB562 /* MediaListViewController.xib */,
+				FA83256E22426F75009FB562 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA83256D22426F4A009FB562 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA83257322426FF4009FB562 /* MediaListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA83256E22426F75009FB562 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA83256F22426FA7009FB562 /* MediaListCollectionViewCell.swift */,
+				FA83257122426FC8009FB562 /* MediaListCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA83257D22459446009FB562 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FA83257E22459462009FB562 /* CheckInternet.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FA8325802245AC83009FB562 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325812245ACB4009FB562 /* UICollectionViewCellExtensions.swift */,
+				FA8325832245ACCC009FB562 /* UICollectionViewExtensions.swift */,
+				FA8325852245AD0D009FB562 /* UIImageViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +392,8 @@
 			files = (
 				FA832533224155A1009FB562 /* LaunchScreen.storyboard in Resources */,
 				FA832530224155A1009FB562 /* Assets.xcassets in Resources */,
-				FA83254E22416105009FB562 /* ListViewController.xib in Resources */,
+				FA83257222426FC8009FB562 /* MediaListCollectionViewCell.xib in Resources */,
+				FA83254E22416105009FB562 /* MediaListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,19 +512,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8325552241626F009FB562 /* ListViewBuilder.swift in Sources */,
+				FA8325552241626F009FB562 /* MediaListBuilder.swift in Sources */,
 				FA83255E2241A707009FB562 /* AppConstants.swift in Sources */,
+				FA8325822245ACB4009FB562 /* UICollectionViewCellExtensions.swift in Sources */,
 				FA8325602241A8FE009FB562 /* DataSourceProtocol.swift in Sources */,
 				FA8325582241A6AB009FB562 /* Service.swift in Sources */,
 				FA8325692241AC7B009FB562 /* Media.swift in Sources */,
+				FA83257F22459462009FB562 /* CheckInternet.swift in Sources */,
+				FA83257422426FF4009FB562 /* MediaListViewModel.swift in Sources */,
 				FA8325512241620F009FB562 /* AppRouter.swift in Sources */,
 				FA83256B2241B024009FB562 /* ItunesDataSource.swift in Sources */,
 				FA8325632241ABD6009FB562 /* SearchResponse.swift in Sources */,
+				FA83257022426FA7009FB562 /* MediaListCollectionViewCell.swift in Sources */,
 				FA83255A2241A6CB009FB562 /* ServiceProtocol.swift in Sources */,
 				FA8325532241621C009FB562 /* AppContainer.swift in Sources */,
+				FA83257622427099009FB562 /* MediaListContract.swift in Sources */,
+				FA8325842245ACCD009FB562 /* UICollectionViewExtensions.swift in Sources */,
 				FA8325652241ABE4009FB562 /* SearchRequest.swift in Sources */,
 				FA8325292241559C009FB562 /* AppDelegate.swift in Sources */,
-				FA83254C224160F4009FB562 /* ListViewController.swift in Sources */,
+				FA8325862245AD0D009FB562 /* UIImageViewExtensions.swift in Sources */,
+				FA83254C224160F4009FB562 /* MediaListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

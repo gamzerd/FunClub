@@ -14,6 +14,6 @@ protocol DataSourceProtocol {
     /**
      * Retrieves the result data from api.
      */
-    func getSearchResult(term: String, country: String, media: String) -> Observable<[Media]>
+    func getSearchResult(term: String, country: String, media: String) -> Observable<SearchResponse>
     
 }

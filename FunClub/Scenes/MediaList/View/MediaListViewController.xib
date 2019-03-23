@@ -10,8 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="FunClub" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaListViewController" customModule="FunClub" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="Ep2-25-uPG" id="tIN-jg-JUf"/>
                 <outlet property="view" destination="v0V-r7-SLu" id="OCC-wv-gal"/>
             </connections>
         </placeholder>
@@ -20,9 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ep2-25-uPG">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ep2-25-uPG">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="clh-kC-FLE">
                         <size key="itemSize" width="50" height="50"/>
@@ -30,9 +30,19 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9K7-4G-gZh"/>
+                        <outlet property="delegate" destination="-1" id="wRp-Rk-eo9"/>
+                    </connections>
                 </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="E7M-15-Psh" firstAttribute="top" secondItem="Ep2-25-uPG" secondAttribute="top" constant="20" id="DU9-Bi-mZR"/>
+                <constraint firstItem="E7M-15-Psh" firstAttribute="bottom" secondItem="Ep2-25-uPG" secondAttribute="bottom" id="FVW-Wi-ikT"/>
+                <constraint firstItem="E7M-15-Psh" firstAttribute="trailing" secondItem="Ep2-25-uPG" secondAttribute="trailing" id="QKK-SM-Coz"/>
+                <constraint firstItem="Ep2-25-uPG" firstAttribute="leading" secondItem="E7M-15-Psh" secondAttribute="leading" id="ULK-Vn-Xgm"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="E7M-15-Psh"/>
         </view>
     </objects>

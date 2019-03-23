@@ -20,7 +20,7 @@ final class AppRouter {
      * Sets rootViewController.
      */
     func start() {
-        let viewController = ListViewBuilder.make()
+        let viewController = MediaListBuilder.make()
         //viewController.delegate = self
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
