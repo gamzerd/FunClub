@@ -24,6 +24,7 @@ protocol MediaListViewModelProtocol: class {
         
     func didAlertButtonClick()
     
+    func didSearchInputChange(text: String)
 }
 
 protocol MediaListViewProtocol: class {

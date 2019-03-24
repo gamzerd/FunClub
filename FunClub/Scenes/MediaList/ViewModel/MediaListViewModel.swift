@@ -52,15 +52,15 @@ final class MediaListViewModel: MediaListViewModelProtocol {
             viewDelegate?.showAlert(alertTitle: "Warning", alertMessage: "You are not connected to the internet!", buttonTitle: "Retry")
         }
         
-        dataSource.getSearchResult(term: "lost", country: "US", media: "all", limit: limit)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { response in
-                self.list.append(contentsOf: response.results)
-            }, onError: { _ in
-                self.viewDelegate?.showAlert(alertTitle: "Error", alertMessage: "Fetching list failed!", buttonTitle: "Retry")
-            }, onCompleted: {
-                self.viewDelegate?.showList()
-            }).disposed(by: self.disposeBag)
+//        dataSource.getSearchResult(term: "lost", country: "US", media: "all", limit: limit)
+//            .observeOn(MainScheduler.instance)
+//            .subscribe(onNext: { response in
+//                self.list.append(contentsOf: response.results)
+//            }, onError: { _ in
+//                self.viewDelegate?.showAlert(alertTitle: "Error", alertMessage: "Fetching list failed!", buttonTitle: "Retry")
+//            }, onCompleted: {
+//                self.viewDelegate?.showList()
+//            }).disposed(by: self.disposeBag)
         
     }
     
@@ -80,5 +80,27 @@ final class MediaListViewModel: MediaListViewModelProtocol {
     func didPressLong(index: Int) -> UIViewController {
         
         return MediaDetailBuilder.make(with: list[index])
+    }
+    
+    /**
+     * Called when input of search changed.
+     * @param text: new search string.
+     */
+    func didSearchInputChange(text: String = "") {
+        
+        if text.isEmpty {
+            list = []
+            viewDelegate?.showList()
+        } else {
+            dataSource.getSearchResult(term: text, country: "US", media: "all", limit: limit)
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { response in
+                    self.list = response.results
+                }, onError: { _ in
+                    self.viewDelegate?.showAlert(alertTitle: "Error", alertMessage: "Fetching list failed!", buttonTitle: "Retry")
+                }, onCompleted: {
+                    self.viewDelegate?.showList()
+                }).disposed(by: self.disposeBag)
+        }
     }
 }

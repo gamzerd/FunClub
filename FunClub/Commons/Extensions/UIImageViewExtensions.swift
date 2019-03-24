@@ -12,6 +12,8 @@ extension UIImageView {
     
     func setImage(with url: String) {
         
+        image = nil
+        
         guard let imageURL = URL(string: url) else { return }
         
         let dataTask = URLSession.shared.dataTask(with: imageURL) { data, response, error in

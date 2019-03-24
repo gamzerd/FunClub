@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaListViewController" customModule="FunClub" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Ep2-25-uPG" id="tIN-jg-JUf"/>
+                <outlet property="searchBar" destination="b9C-ur-oLa" id="EIS-oo-DOv"/>
                 <outlet property="view" destination="v0V-r7-SLu" id="OCC-wv-gal"/>
             </connections>
         </placeholder>
@@ -21,8 +22,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <searchBar contentMode="redraw" placeholder="Type to search media" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-ur-oLa">
+                    <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="rcL-z6-zNM"/>
+                    </connections>
+                </searchBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ep2-25-uPG">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="clh-kC-FLE">
                         <size key="itemSize" width="50" height="50"/>
@@ -38,12 +46,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="E7M-15-Psh" firstAttribute="top" secondItem="Ep2-25-uPG" secondAttribute="top" constant="20" id="DU9-Bi-mZR"/>
+                <constraint firstItem="E7M-15-Psh" firstAttribute="trailing" secondItem="b9C-ur-oLa" secondAttribute="trailing" id="6ZA-AR-Pt2"/>
                 <constraint firstItem="E7M-15-Psh" firstAttribute="bottom" secondItem="Ep2-25-uPG" secondAttribute="bottom" id="FVW-Wi-ikT"/>
+                <constraint firstItem="E7M-15-Psh" firstAttribute="top" secondItem="b9C-ur-oLa" secondAttribute="top" id="PeG-03-mbq"/>
                 <constraint firstItem="E7M-15-Psh" firstAttribute="trailing" secondItem="Ep2-25-uPG" secondAttribute="trailing" id="QKK-SM-Coz"/>
                 <constraint firstItem="Ep2-25-uPG" firstAttribute="leading" secondItem="E7M-15-Psh" secondAttribute="leading" id="ULK-Vn-Xgm"/>
+                <constraint firstItem="b9C-ur-oLa" firstAttribute="leading" secondItem="E7M-15-Psh" secondAttribute="leading" id="edS-mb-4IC"/>
+                <constraint firstItem="Ep2-25-uPG" firstAttribute="top" secondItem="b9C-ur-oLa" secondAttribute="bottom" id="kNx-p4-bUF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="E7M-15-Psh"/>
+            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
         </view>
     </objects>
 </document>

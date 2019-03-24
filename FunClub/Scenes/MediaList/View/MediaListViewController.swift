@@ -11,6 +11,7 @@ import RxSwift
 
 final class MediaListViewController: UIViewController {
    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: MediaListViewModelProtocol!
@@ -125,5 +126,15 @@ extension MediaListViewController: UIViewControllerPreviewingDelegate {
     }
 }
 
+extension MediaListViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.didSearchInputChange(text: searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)  {
+        searchBar.resignFirstResponder()
+    }
+}
 
 
