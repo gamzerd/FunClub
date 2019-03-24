@@ -25,11 +25,17 @@ protocol MediaListViewModelProtocol: class {
     func didAlertButtonClick()
     
     func didSearchInputChange(text: String)
+    
+    func didMediaFilterOptionSelect(option: String)
+    
+    func didFilterButtonClick()
 }
 
 protocol MediaListViewProtocol: class {
     
     func showList()
+    
+    func showMediaFilter(options: [MediaFilterOption])
     
     func openPage(media: Media)
     

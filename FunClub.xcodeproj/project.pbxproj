@@ -43,6 +43,7 @@
 		FA83259D2246E08D009FB562 /* ItunesUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83259C2246E08D009FB562 /* ItunesUtility.swift */; };
 		FA8325A02246F552009FB562 /* MediaDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83259F2246F552009FB562 /* MediaDetailTableViewCell.swift */; };
 		FA8325A22246F566009FB562 /* MediaDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8325A12246F566009FB562 /* MediaDetailTableViewCell.xib */; };
+		FA8325A42247B1DE009FB562 /* MediaFilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325A32247B1DE009FB562 /* MediaFilterOption.swift */; };
 		FB0FD7118C332D4CF1EF79C8 /* Pods_FunClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BE9159D20C735B755AF83 /* Pods_FunClubTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		FA83259C2246E08D009FB562 /* ItunesUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesUtility.swift; sourceTree = "<group>"; };
 		FA83259F2246F552009FB562 /* MediaDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FA8325A12246F566009FB562 /* MediaDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailTableViewCell.xib; sourceTree = "<group>"; };
+		FA8325A32247B1DE009FB562 /* MediaFilterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFilterOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			children = (
 				FA83257522427099009FB562 /* MediaListContract.swift */,
 				FA8325542241626F009FB562 /* MediaListBuilder.swift */,
+				FA8325A32247B1DE009FB562 /* MediaFilterOption.swift */,
 				FA83256D22426F4A009FB562 /* ViewModel */,
 				FA83256C22426F3F009FB562 /* View */,
 			);
@@ -573,6 +576,7 @@
 				FA83255E2241A707009FB562 /* AppConstants.swift in Sources */,
 				FA8325992246BEA2009FB562 /* UITableViewExtensions.swift in Sources */,
 				FA8325822245ACB4009FB562 /* UICollectionViewCellExtensions.swift in Sources */,
+				FA8325A42247B1DE009FB562 /* MediaFilterOption.swift in Sources */,
 				FA83259D2246E08D009FB562 /* ItunesUtility.swift in Sources */,
 				FA8325602241A8FE009FB562 /* DataSourceProtocol.swift in Sources */,
 				FA8325582241A6AB009FB562 /* Service.swift in Sources */,

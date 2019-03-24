@@ -28,7 +28,31 @@ final class MediaListViewController: UIViewController {
         title = viewModel.getTitle()
         viewModel.load()
         collectionView.register(MediaListCollectionViewCell.self)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .done, target: self, action: #selector(rightButtonClickAction))
         registerForPreviewing(with: self, sourceView: collectionView)
+    }
+    
+    @objc func rightButtonClickAction() {
+        viewModel.didFilterButtonClick()
+    }
+    
+    func showMediaFilter(options: [MediaFilterOption]) {
+    
+        let alert = UIAlertController(title: "", message: "Please select a media type", preferredStyle: .actionSheet)
+        options.forEach { option in
+            let action = UIAlertAction(title: option.filterName, style: .default, handler:{ (UIAlertAction) in
+                    self.viewModel.didMediaFilterOptionSelect(option: option.value)
+                })
+            let image = UIImage(named: "checked")
+            if option.isSelected {
+                action.setValue(image, forKey: "image")
+            }
+            alert.addAction(action)
+        }
+        
+        let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }
 

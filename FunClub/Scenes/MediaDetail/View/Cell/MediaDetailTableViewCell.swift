@@ -19,6 +19,6 @@ class MediaDetailTableViewCell: UITableViewCell {
      * @param mediaPath: image url of media.
      */
     func setup(with media: Media) {
-        mediaImage.setImage(with: ItunesUtility.getProperImageUrl(url: media.artworkUrl100, size: 1200))
+        mediaImage.setImage(with: ItunesUtility.getProperImageUrl(url: media.artworkUrl100, size: 600))
     }
 }
