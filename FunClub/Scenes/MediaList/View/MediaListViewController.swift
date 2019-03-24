@@ -32,6 +32,15 @@ final class MediaListViewController: UIViewController {
         registerForPreviewing(with: self, sourceView: collectionView)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // add delay to fix orientation changes
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.collectionView.reloadData()
+        }
+    }
+    
     @objc func rightButtonClickAction() {
         viewModel.didFilterButtonClick()
     }

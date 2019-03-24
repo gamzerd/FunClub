@@ -89,7 +89,7 @@ final class MediaListViewModel: MediaListViewModelProtocol {
             viewDelegate?.showList()
         } else {
             
-            // calcel the previous request
+            // cancel the previous request
             searchTimer?.invalidate()
             
             // wait for 0.3 seconds to fetch list
