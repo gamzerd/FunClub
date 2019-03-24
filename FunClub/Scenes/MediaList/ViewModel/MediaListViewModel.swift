@@ -13,7 +13,7 @@ final class MediaListViewModel: MediaListViewModelProtocol {
     
     let limit = 100
     
-    var list: [Media] = []
+    var list: [MediaListCellViewModel] = []
     
     var searchTimer: Timer?
 
@@ -42,14 +42,6 @@ final class MediaListViewModel: MediaListViewModelProtocol {
     }
     
     /**
-     * Called when a row of the media list is selected.
-     * @param index: index of the selected section.
-     */
-    func didRowSelect(index: Int) {
-        viewDelegate?.openPage(media: list[index])
-    }
-    
-    /**
      * Makes api call to get the list.
      */
     func load() {
@@ -68,13 +60,25 @@ final class MediaListViewModel: MediaListViewModelProtocol {
     }
     
     /**
+     * Called when a row of the media list is selected.
+     * @param index: index of the selected section.
+     */
+    func didRowSelect(index: Int) {
+        
+        list[index].isSelected = true
+        dataSource.saveSelectedItem(id: list[index].media.trackId ?? 0)
+        viewDelegate?.showList(index: index)
+        viewDelegate?.openPage(media: list[index].media)
+    }
+
+    /**
      * Called when cell pressed long.
      * @param index: index of the selected row.
      * @return MediaDetailViewController: controller to show
      */
     func didPressLong(index: Int) -> UIViewController {
         
-        return MediaDetailBuilder.make(with: list[index])
+        return MediaDetailBuilder.make(with: list[index].media)
     }
     
     /**
@@ -86,7 +90,7 @@ final class MediaListViewModel: MediaListViewModelProtocol {
         searchText = text
         if text.isEmpty {
             list = []
-            viewDelegate?.showList()
+            viewDelegate?.showList(index: -1)
         } else {
             
             // cancel the previous request
@@ -122,14 +126,27 @@ final class MediaListViewModel: MediaListViewModelProtocol {
     
     func fetchList() {
         
-        dataSource.getSearchResult(term: searchText, country: "US", media: selectedOption, limit: limit)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { response in
-                self.list = response.results
-            }, onError: { _ in
+        Observable.zip(
+            // get selected item list
+            dataSource.getSelectedItemList(),
+            
+            // get media list
+            dataSource.getSearchResult(term: searchText, country: "US", media: selectedOption, limit: limit),
+            
+            // consume the result of two async actions
+            resultSelector: { selectedItemList, response in
+                self.list = []
+                response.results.forEach({ item in
+                    self.list.append(MediaListCellViewModel(
+                        isSelected: selectedItemList.firstIndex(of: item.trackId ?? 0) != nil,
+                        media: item
+                    ))
+                })
+        }).observeOn(MainScheduler.instance)
+            .subscribe(onError: {_ in
                 self.viewDelegate?.showAlert(alertTitle: "Error", alertMessage: "Fetching list failed!", buttonTitle: "Retry")
             }, onCompleted: {
-                self.viewDelegate?.showList()
+                self.viewDelegate?.showList(index: -1)
             }).disposed(by: self.disposeBag)
     }
 }

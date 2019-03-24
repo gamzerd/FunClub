@@ -68,10 +68,15 @@ final class MediaListViewController: UIViewController {
 extension MediaListViewController: MediaListViewProtocol {
     
     /**
-     * Shows Media list.
+     * Shows movie list.
+     * @param index: to reload in tableview
      */
-    func showList() {
-        self.collectionView.reloadData()
+    func showList(index: Int) {
+        if index == -1 {
+            collectionView.reloadData()
+        } else {
+            collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+        }
     }
     
     /**

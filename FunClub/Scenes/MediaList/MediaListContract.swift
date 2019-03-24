@@ -12,7 +12,7 @@ protocol MediaListViewModelProtocol: class {
     
     var viewDelegate: MediaListViewProtocol? { get set }
     
-    var list: [Media] { get set }
+    var list: [MediaListCellViewModel] { get set }
     
     func load()
     
@@ -33,7 +33,7 @@ protocol MediaListViewModelProtocol: class {
 
 protocol MediaListViewProtocol: class {
     
-    func showList()
+    func showList(index: Int)
     
     func showMediaFilter(options: [MediaFilterOption])
     

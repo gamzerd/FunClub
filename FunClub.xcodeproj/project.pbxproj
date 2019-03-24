@@ -44,6 +44,7 @@
 		FA8325A02246F552009FB562 /* MediaDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83259F2246F552009FB562 /* MediaDetailTableViewCell.swift */; };
 		FA8325A22246F566009FB562 /* MediaDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8325A12246F566009FB562 /* MediaDetailTableViewCell.xib */; };
 		FA8325A42247B1DE009FB562 /* MediaFilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325A32247B1DE009FB562 /* MediaFilterOption.swift */; };
+		FA8325A6224834A6009FB562 /* MediaListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325A5224834A6009FB562 /* MediaListCellViewModel.swift */; };
 		FB0FD7118C332D4CF1EF79C8 /* Pods_FunClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BE9159D20C735B755AF83 /* Pods_FunClubTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		FA83259F2246F552009FB562 /* MediaDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FA8325A12246F566009FB562 /* MediaDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailTableViewCell.xib; sourceTree = "<group>"; };
 		FA8325A32247B1DE009FB562 /* MediaFilterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFilterOption.swift; sourceTree = "<group>"; };
+		FA8325A5224834A6009FB562 /* MediaListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 			children = (
 				FA83256F22426FA7009FB562 /* MediaListCollectionViewCell.swift */,
 				FA83257122426FC8009FB562 /* MediaListCollectionViewCell.xib */,
+				FA8325A5224834A6009FB562 /* MediaListCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				FA8325842245ACCD009FB562 /* UICollectionViewExtensions.swift in Sources */,
 				FA83259B2246BEB9009FB562 /* UITableViewCellExtensions.swift in Sources */,
 				FA8325652241ABE4009FB562 /* SearchRequest.swift in Sources */,
+				FA8325A6224834A6009FB562 /* MediaListCellViewModel.swift in Sources */,
 				FA8325292241559C009FB562 /* AppDelegate.swift in Sources */,
 				FA8325862245AD0D009FB562 /* UIImageViewExtensions.swift in Sources */,
 				FA83258E2246B712009FB562 /* MediaDetailContract.swift in Sources */,

@@ -13,6 +13,7 @@ class ItunesDataSource: DataSourceProtocol {
   
     var api: ServiceProtocol
     var defaults = UserDefaults.standard
+    final let selectedItemListIdsKey = "SelectedItemListIds"
     
     init() {
         self.api = Service(
@@ -47,5 +48,25 @@ class ItunesDataSource: DataSourceProtocol {
                 
             }
         }
+    }
+    
+    /**
+     * Saves selected with given id
+     * @param id: track id
+     */
+    func saveSelectedItem(id: Int) {
+        
+        // append new favourite to the list
+        var array = defaults.array(forKey: selectedItemListIdsKey) as? [Int] ?? [Int]()
+        array.append(id)
+        
+        // update the favourite list in UserDefaults
+        defaults.set(array, forKey: selectedItemListIdsKey)
+        
+    }
+    
+    func getSelectedItemList() -> Observable<[Int]> {
+        
+        return Observable.just(defaults.array(forKey: selectedItemListIdsKey) as? [Int] ?? [Int]())
     }
 }

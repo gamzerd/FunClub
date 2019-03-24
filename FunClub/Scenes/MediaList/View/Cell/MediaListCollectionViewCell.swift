@@ -19,12 +19,20 @@ class MediaListCollectionViewCell: UICollectionViewCell {
         clipsToBounds = true
     }
     
-    func setup(with media: Media) {
+    func setup(with cellViewModel: MediaListCellViewModel) {
+        
+        let media = cellViewModel.media
         titleLabel.text = media.trackName
         if AppConstants.MediaCollection.getNumberOfColumns() == 2 {
             mediaImageView.setImage(with: ItunesUtility.getProperImageUrl(url: media.artworkUrl100, size: 200))
         } else {
             mediaImageView.setImage(with: ItunesUtility.getProperImageUrl(url: media.artworkUrl100, size: 600))
+        }
+        
+        if cellViewModel.isSelected {
+            titleLabel.textColor = .green
+        } else {
+            titleLabel.textColor = .white
         }
     }
 }
