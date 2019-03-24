@@ -13,8 +13,9 @@ class ItunesDataSource: DataSourceProtocol {
   
     var api: ServiceProtocol
     var defaults = UserDefaults.standard
-    final let selectedItemListIdsKey = "SelectedItemListIds"
-    
+    final let visitedItemListIdsKey = "VisitedItemListIds"
+    final let deletedItemListIdsKey = "DeletedItemListIds"
+
     init() {
         self.api = Service(
             url: AppConstants.API.baseUrl,
@@ -54,19 +55,43 @@ class ItunesDataSource: DataSourceProtocol {
      * Saves selected with given id
      * @param id: track id
      */
-    func saveSelectedItem(id: Int) {
+    func saveVisitedItem(id: Int) {
         
         // append new favourite to the list
-        var array = defaults.array(forKey: selectedItemListIdsKey) as? [Int] ?? [Int]()
-        array.append(id)
+        var array = defaults.array(forKey: visitedItemListIdsKey) as? [Int] ?? [Int]()
+        if !array.contains(id) {
+            array.append(id)
+        }
         
         // update the favourite list in UserDefaults
-        defaults.set(array, forKey: selectedItemListIdsKey)
+        defaults.set(array, forKey: visitedItemListIdsKey)
         
     }
     
-    func getSelectedItemList() -> Observable<[Int]> {
+    func getVisitedItemList() -> Observable<[Int]> {
         
-        return Observable.just(defaults.array(forKey: selectedItemListIdsKey) as? [Int] ?? [Int]())
+        return Observable.just(defaults.array(forKey: visitedItemListIdsKey) as? [Int] ?? [Int]())
+    }
+    
+    /**
+     * Adds deleted item with given id
+     * @param id: track id
+     */
+    func addDeletedItem(id: Int) {
+        
+        // append deleted item to the list
+        var array = defaults.array(forKey: deletedItemListIdsKey) as? [Int] ?? [Int]()
+        if !array.contains(id) {
+            array.append(id)
+        }
+        // update the deleted list in UserDefaults
+        defaults.set(array, forKey: deletedItemListIdsKey)
+        
+    }
+    
+    
+    func getDeletedItemList() -> Observable<[Int]> {
+        
+        return Observable.just(defaults.array(forKey: deletedItemListIdsKey) as? [Int] ?? [Int]())
     }
 }

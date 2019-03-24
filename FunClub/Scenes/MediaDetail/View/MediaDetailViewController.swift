@@ -23,6 +23,20 @@ final class MediaDetailViewController: UIViewController {
         super.viewDidLoad()
         title = viewModel.getTitle()
         tableView.register(MediaDetailTableViewCell.self)
+        
+        let image = UIImage(named: "delete")
+        let button = UIButton(type: .system)
+        
+        button.setImage((image), for: .normal)
+        button.addTarget(self, action: #selector(deleteButtonClicked), for: .touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+        
+    }
+    
+    @objc func deleteButtonClicked() {
+        viewModel.didDeleteButtonClick()
     }
 }
 

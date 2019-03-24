@@ -12,7 +12,7 @@ final class MediaDetailBuilder {
     
     static func make(with media: Media) -> MediaDetailViewController {
         
-        let viewModel = MediaDetailViewModel(media: media)
+        let viewModel = MediaDetailViewModel(dataSource: app.dataSource, media: media)
         let viewController = MediaDetailViewController(viewModel: viewModel)
         return viewController
     }

@@ -16,8 +16,12 @@ protocol DataSourceProtocol {
      */
     func getSearchResult(term: String, country: String, media: String, limit: Int) -> Observable<SearchResponse>
     
-    func saveSelectedItem(id: Int)
+    func saveVisitedItem(id: Int)
     
-    func getSelectedItemList() -> Observable<[Int]>
+    func getVisitedItemList() -> Observable<[Int]>
     
+    func addDeletedItem(id: Int)
+    
+    func getDeletedItemList() -> Observable<[Int]>
+
 }

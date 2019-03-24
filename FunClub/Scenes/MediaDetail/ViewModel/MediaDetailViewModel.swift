@@ -11,8 +11,11 @@ import Foundation
 final class MediaDetailViewModel: MediaDetailViewModelProtocol {
    
     var media: Media
-    
-    init(media: Media) {
+   
+    var dataSource: DataSourceProtocol
+
+    init(dataSource: DataSourceProtocol, media: Media) {
+        self.dataSource = dataSource
         self.media = media
     }
     
@@ -22,6 +25,10 @@ final class MediaDetailViewModel: MediaDetailViewModelProtocol {
     func getTitle() -> String {
         
         return "Selected Item"
+    }
+    
+    func didDeleteButtonClick() {
+        dataSource.addDeletedItem(id: self.media.trackId ?? 0)
     }
     
 }

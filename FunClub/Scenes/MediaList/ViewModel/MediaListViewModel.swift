@@ -66,7 +66,7 @@ final class MediaListViewModel: MediaListViewModelProtocol {
     func didRowSelect(index: Int) {
         
         list[index].isSelected = true
-        dataSource.saveSelectedItem(id: list[index].media.trackId ?? 0)
+        dataSource.saveVisitedItem(id: list[index].media.trackId ?? 0)
         viewDelegate?.showList(index: index)
         viewDelegate?.openPage(media: list[index].media)
     }
@@ -128,19 +128,24 @@ final class MediaListViewModel: MediaListViewModelProtocol {
         
         Observable.zip(
             // get selected item list
-            dataSource.getSelectedItemList(),
+            dataSource.getVisitedItemList(),
+            
+            // get deleted item list
+            dataSource.getDeletedItemList(),
             
             // get media list
             dataSource.getSearchResult(term: searchText, country: "US", media: selectedOption, limit: limit),
             
             // consume the result of two async actions
-            resultSelector: { selectedItemList, response in
+            resultSelector: { selectedItemList, deletedItemList, response in
                 self.list = []
                 response.results.forEach({ item in
-                    self.list.append(MediaListCellViewModel(
-                        isSelected: selectedItemList.firstIndex(of: item.trackId ?? 0) != nil,
-                        media: item
-                    ))
+                    if deletedItemList.firstIndex(of: item.trackId ?? 0) == nil {
+                        self.list.append(MediaListCellViewModel(
+                            isSelected: selectedItemList.firstIndex(of: item.trackId ?? 0) != nil,
+                            media: item
+                        ))
+                    }
                 })
         }).observeOn(MainScheduler.instance)
             .subscribe(onError: {_ in
