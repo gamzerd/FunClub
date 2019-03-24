@@ -20,7 +20,7 @@ class MediaListCollectionViewCell: UICollectionViewCell {
     }
     
     func setup(with media: Media) {
-        titleLabel.text = media.wrapperType
+        titleLabel.text = media.trackName
         if AppConstants.MediaCollection.getNumberOfColumns() == 2 {
             mediaImageView.setImage(with: ItunesUtility.getProperImageUrl(url: media.artworkUrl100, size: 200))
         } else {

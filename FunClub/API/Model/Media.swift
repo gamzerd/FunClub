@@ -10,14 +10,9 @@ import Foundation
 
 class Media: Codable {
     
-    var wrapperType: String = ""
-    var artworkUrl100: String = ""
-    
-    init(wrapperType: String = "",
-         artworkUrl100:  String = "")
-    {
-        self.wrapperType = wrapperType
-        self.artworkUrl100 = artworkUrl100
-    }
+    var kind: String?
+    var artworkUrl100: String
+    var trackId: Int?
+    var trackName: String?
 
 }
