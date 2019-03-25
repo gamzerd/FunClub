@@ -12,6 +12,7 @@ import RxSwift
 final class MediaListViewController: UIViewController {
    
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: MediaListViewModelProtocol!
@@ -69,14 +70,26 @@ extension MediaListViewController: MediaListViewProtocol {
     
     /**
      * Shows media list.
-     * @param index: to reload in tableview
+     * @param indexToUpdate: to reload in collectionView
+     * @param indexToDelete: to delete from collectionView
      */
-    func showList(index: Int) {
-        if index == -1 {
+    func showList(indexToUpdate: Int, indexToDelete: Int) {
+        
+        if indexToDelete != -1 {
+            self.collectionView.performBatchUpdates({
+                self.collectionView.deleteItems(at:[IndexPath(row: indexToDelete, section: 0)])
+            }, completion:nil)
+        } else if indexToUpdate == -1 {
             collectionView.reloadData()
         } else {
-            collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+            collectionView.reloadItems(at: [IndexPath(row: indexToUpdate, section: 0)])
         }
+    }
+    
+    func showHideMessage(isHidden: Bool) {
+        
+        self.messageLabel.isHidden = isHidden
+
     }
     
     /**

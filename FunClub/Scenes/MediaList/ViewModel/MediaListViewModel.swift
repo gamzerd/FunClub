@@ -70,7 +70,7 @@ final class MediaListViewModel: MediaListViewModelProtocol, DataSourceDelegatePr
         
         list[index].isSelected = true
         dataSource.saveVisitedItem(id: list[index].media.trackId ?? 0)
-        viewDelegate?.showList(index: index)
+        viewDelegate?.showList(indexToUpdate: index, indexToDelete: -1)
         viewDelegate?.openPage(media: list[index].media)
     }
 
@@ -93,7 +93,8 @@ final class MediaListViewModel: MediaListViewModelProtocol, DataSourceDelegatePr
         searchText = text
         if text.isEmpty {
             list = []
-            viewDelegate?.showList(index: -1)
+            viewDelegate?.showList(indexToUpdate: -1, indexToDelete: -1)
+            viewDelegate?.showHideMessage(isHidden: false)
         } else {
             
             // cancel the previous request
@@ -112,11 +113,19 @@ final class MediaListViewModel: MediaListViewModelProtocol, DataSourceDelegatePr
      */
     func didChangeDeletedItemStatus(id: Int) {
         
-        list = list.filter({ (item) -> Bool in
-            return item.media.trackId != id
-        })
-        
-        viewDelegate?.showList(index: -1)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            
+            // find media index from given id
+            let index = self.list.firstIndex { (item) -> Bool in
+                return item.media.trackId == id
+            }
+            
+            // update media in the list and show list
+            if  index != nil && index! > -1 {
+                self.list.remove(at: index!)
+                self.viewDelegate?.showList(indexToUpdate: -1, indexToDelete: index!)
+            }
+        }
     }
     
     func didMediaFilterOptionSelect(option: String) {
@@ -167,7 +176,8 @@ final class MediaListViewModel: MediaListViewModelProtocol, DataSourceDelegatePr
             .subscribe(onError: {_ in
                 self.viewDelegate?.showAlert(alertTitle: "Error", alertMessage: "Fetching list failed!", buttonTitle: "Retry")
             }, onCompleted: {
-                self.viewDelegate?.showList(index: -1)
+                self.viewDelegate?.showList(indexToUpdate: -1, indexToDelete: -1)
+                self.viewDelegate?.showHideMessage(isHidden: true)
             }).disposed(by: self.disposeBag)
     }
     

@@ -33,7 +33,9 @@ protocol MediaListViewModelProtocol: class {
 
 protocol MediaListViewProtocol: class {
     
-    func showList(index: Int)
+    func showList(indexToUpdate: Int, indexToDelete: Int)
+    
+    func showHideMessage(isHidden: Bool)
     
     func showMediaFilter(options: [MediaFilterOption])
     

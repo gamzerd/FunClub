@@ -36,6 +36,7 @@ final class MediaDetailViewController: UIViewController {
     }
     
     @objc func deleteButtonClicked() {
+        self.navigationController?.popViewController(animated: true)
         viewModel.didDeleteButtonClick()
     }
 }

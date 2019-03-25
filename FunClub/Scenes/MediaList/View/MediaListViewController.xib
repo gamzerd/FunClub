@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaListViewController" customModule="FunClub" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Ep2-25-uPG" id="tIN-jg-JUf"/>
+                <outlet property="messageLabel" destination="GnB-RM-cXb" id="Pt0-ui-yHX"/>
                 <outlet property="searchBar" destination="b9C-ur-oLa" id="EIS-oo-DOv"/>
                 <outlet property="view" destination="v0V-r7-SLu" id="OCC-wv-gal"/>
             </connections>
@@ -43,6 +44,16 @@
                         <outlet property="delegate" destination="-1" id="wRp-Rk-eo9"/>
                     </connections>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for musics, movies or podcasts from the above!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-RM-cXb">
+                    <rect key="frame" x="16" y="272.5" width="343" height="142"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="343" id="9xB-zm-C1g"/>
+                        <constraint firstAttribute="height" constant="142" id="PlF-aX-flc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -51,11 +62,13 @@
                 <constraint firstItem="E7M-15-Psh" firstAttribute="top" secondItem="b9C-ur-oLa" secondAttribute="top" id="PeG-03-mbq"/>
                 <constraint firstItem="E7M-15-Psh" firstAttribute="trailing" secondItem="Ep2-25-uPG" secondAttribute="trailing" id="QKK-SM-Coz"/>
                 <constraint firstItem="Ep2-25-uPG" firstAttribute="leading" secondItem="E7M-15-Psh" secondAttribute="leading" id="ULK-Vn-Xgm"/>
+                <constraint firstItem="GnB-RM-cXb" firstAttribute="centerX" secondItem="E7M-15-Psh" secondAttribute="centerX" id="cFu-aP-BqM"/>
                 <constraint firstItem="b9C-ur-oLa" firstAttribute="leading" secondItem="E7M-15-Psh" secondAttribute="leading" id="edS-mb-4IC"/>
+                <constraint firstItem="GnB-RM-cXb" firstAttribute="centerY" secondItem="E7M-15-Psh" secondAttribute="centerY" id="jdd-BU-Rxo"/>
                 <constraint firstItem="Ep2-25-uPG" firstAttribute="top" secondItem="b9C-ur-oLa" secondAttribute="bottom" id="kNx-p4-bUF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="E7M-15-Psh"/>
-            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
 </document>
