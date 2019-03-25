@@ -16,6 +16,8 @@ class ItunesDataSource: DataSourceProtocol {
     final let visitedItemListIdsKey = "VisitedItemListIds"
     final let deletedItemListIdsKey = "DeletedItemListIds"
 
+    var delegates: [DataSourceDelegateProtocol] = []
+
     init() {
         self.api = Service(
             url: AppConstants.API.baseUrl,
@@ -57,13 +59,13 @@ class ItunesDataSource: DataSourceProtocol {
      */
     func saveVisitedItem(id: Int) {
         
-        // append new favourite to the list
+        // append visited item to the list
         var array = defaults.array(forKey: visitedItemListIdsKey) as? [Int] ?? [Int]()
         if !array.contains(id) {
             array.append(id)
         }
         
-        // update the favourite list in UserDefaults
+        // update visited item list in UserDefaults
         defaults.set(array, forKey: visitedItemListIdsKey)
         
     }
@@ -87,11 +89,26 @@ class ItunesDataSource: DataSourceProtocol {
         // update the deleted list in UserDefaults
         defaults.set(array, forKey: deletedItemListIdsKey)
         
+        // notify all subscribers about the deleted items status change
+        delegates.forEach { (delegate) in
+            delegate.didChangeDeletedItemStatus(id: id)
+        }
     }
     
     
     func getDeletedItemList() -> Observable<[Int]> {
         
         return Observable.just(defaults.array(forKey: deletedItemListIdsKey) as? [Int] ?? [Int]())
+    }
+    
+    func addDelegate(delegate: DataSourceDelegateProtocol) -> Int {
+        delegates.append(delegate)
+        
+        // return the index of the new item. It is used for removing delegate.
+        return delegates.count - 1
+    }
+    
+    func removeDelegate(index: Int) {
+        delegates.remove(at: index)
     }
 }

@@ -68,7 +68,7 @@ final class MediaListViewController: UIViewController {
 extension MediaListViewController: MediaListViewProtocol {
     
     /**
-     * Shows movie list.
+     * Shows media list.
      * @param index: to reload in tableview
      */
     func showList(index: Int) {

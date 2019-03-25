@@ -23,5 +23,15 @@ protocol DataSourceProtocol {
     func addDeletedItem(id: Int)
     
     func getDeletedItemList() -> Observable<[Int]>
+    
+    func addDelegate(delegate: DataSourceDelegateProtocol) -> Int
+    
+    func removeDelegate(index: Int)
 
 }
+
+protocol DataSourceDelegateProtocol: class {
+    
+    func didChangeDeletedItemStatus(id: Int)
+}
+

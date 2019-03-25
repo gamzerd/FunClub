@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-final class MediaListViewModel: MediaListViewModelProtocol {
+final class MediaListViewModel: MediaListViewModelProtocol, DataSourceDelegateProtocol {
     
     let limit = 100
     
@@ -32,6 +32,9 @@ final class MediaListViewModel: MediaListViewModelProtocol {
     
     init (dataSource: DataSourceProtocol) {
         self.dataSource = dataSource
+        
+        // subscribe for changes in deleted items list
+        delegateIndex = dataSource.addDelegate(delegate: self)
     }
     
     /**
@@ -103,6 +106,19 @@ final class MediaListViewModel: MediaListViewModelProtocol {
         }
     }
     
+    /**
+     * Called when deleted item status changed.
+     * @param id: deleted media track id.
+     */
+    func didChangeDeletedItemStatus(id: Int) {
+        
+        list = list.filter({ (item) -> Bool in
+            return item.media.trackId != id
+        })
+        
+        viewDelegate?.showList(index: -1)
+    }
+    
     func didMediaFilterOptionSelect(option: String) {
         
         // if user selects same option, no need to fetch the list
@@ -153,5 +169,11 @@ final class MediaListViewModel: MediaListViewModelProtocol {
             }, onCompleted: {
                 self.viewDelegate?.showList(index: -1)
             }).disposed(by: self.disposeBag)
+    }
+    
+    deinit {
+        
+        // unsubscribe for changes in deleted items list
+        dataSource.removeDelegate(index: delegateIndex)
     }
 }
