@@ -113,18 +113,15 @@ final class MediaListViewModel: MediaListViewModelProtocol, DataSourceDelegatePr
      */
     func didChangeDeletedItemStatus(id: Int) {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            
-            // find media index from given id
-            let index = self.list.firstIndex { (item) -> Bool in
-                return item.media.trackId == id
-            }
-            
-            // update media in the list and show list
-            if  index != nil && index! > -1 {
-                self.list.remove(at: index!)
-                self.viewDelegate?.showList(indexToUpdate: -1, indexToDelete: index!)
-            }
+        // find media index from given id
+        let index = list.firstIndex { (item) -> Bool in
+            return item.media.trackId == id
+        }
+        
+        // update media in the list and show list
+        if  index != nil && index! > -1 {
+            list.remove(at: index!)
+            viewDelegate?.showList(indexToUpdate: -1, indexToDelete: index!)
         }
     }
     

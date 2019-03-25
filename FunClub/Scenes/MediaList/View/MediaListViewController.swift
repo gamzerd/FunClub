@@ -76,12 +76,18 @@ extension MediaListViewController: MediaListViewProtocol {
     func showList(indexToUpdate: Int, indexToDelete: Int) {
         
         if indexToDelete != -1 {
+            
+            // delete the item with animation
             self.collectionView.performBatchUpdates({
                 self.collectionView.deleteItems(at:[IndexPath(row: indexToDelete, section: 0)])
             }, completion:nil)
         } else if indexToUpdate == -1 {
+
+            // reload all list
             collectionView.reloadData()
         } else {
+            
+            // reload only the single item
             collectionView.reloadItems(at: [IndexPath(row: indexToUpdate, section: 0)])
         }
     }
