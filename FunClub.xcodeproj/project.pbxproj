@@ -11,7 +11,6 @@
 		FA8325292241559C009FB562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325282241559C009FB562 /* AppDelegate.swift */; };
 		FA832530224155A1009FB562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83252F224155A1009FB562 /* Assets.xcassets */; };
 		FA832533224155A1009FB562 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA832531224155A1009FB562 /* LaunchScreen.storyboard */; };
-		FA83253E224155A1009FB562 /* FunClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83253D224155A1009FB562 /* FunClubTests.swift */; };
 		FA83254C224160F4009FB562 /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83254B224160F4009FB562 /* MediaListViewController.swift */; };
 		FA83254E22416105009FB562 /* MediaListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA83254D22416105009FB562 /* MediaListViewController.xib */; };
 		FA8325512241620F009FB562 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325502241620F009FB562 /* AppRouter.swift */; };
@@ -45,6 +44,15 @@
 		FA8325A22246F566009FB562 /* MediaDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8325A12246F566009FB562 /* MediaDetailTableViewCell.xib */; };
 		FA8325A42247B1DE009FB562 /* MediaFilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325A32247B1DE009FB562 /* MediaFilterOption.swift */; };
 		FA8325A6224834A6009FB562 /* MediaListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325A5224834A6009FB562 /* MediaListCellViewModel.swift */; };
+		FA8325AE22486C65009FB562 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325AD22486C65009FB562 /* AppRouterTests.swift */; };
+		FA8325B022486CA3009FB562 /* AppContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325AF22486CA2009FB562 /* AppContainerTests.swift */; };
+		FA8325B222486D15009FB562 /* ItunesDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325B122486D15009FB562 /* ItunesDataSourceTests.swift */; };
+		FA8325BC22487475009FB562 /* MediaListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325BB22487475009FB562 /* MediaListViewModelTests.swift */; };
+		FA8325BE22487B26009FB562 /* MediaListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325BD22487B26009FB562 /* MediaListViewControllerTests.swift */; };
+		FA8325C022487D3D009FB562 /* MediaListCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325BF22487D3D009FB562 /* MediaListCollectionViewCellTests.swift */; };
+		FA8325C422487DDD009FB562 /* MediaDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325C322487DDD009FB562 /* MediaDetailViewModelTests.swift */; };
+		FA8325C622487DFB009FB562 /* MediaDetailTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325C522487DFB009FB562 /* MediaDetailTableViewCellTests.swift */; };
+		FA8325C822487E54009FB562 /* MediaDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8325C722487E54009FB562 /* MediaDetailViewControllerTests.swift */; };
 		FB0FD7118C332D4CF1EF79C8 /* Pods_FunClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141BE9159D20C735B755AF83 /* Pods_FunClubTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +79,6 @@
 		FA832532224155A1009FB562 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA832534224155A1009FB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA832539224155A1009FB562 /* FunClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA83253D224155A1009FB562 /* FunClubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunClubTests.swift; sourceTree = "<group>"; };
 		FA83253F224155A1009FB562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA83254B224160F4009FB562 /* MediaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewController.swift; sourceTree = "<group>"; };
 		FA83254D22416105009FB562 /* MediaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaListViewController.xib; sourceTree = "<group>"; };
@@ -106,6 +113,15 @@
 		FA8325A12246F566009FB562 /* MediaDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailTableViewCell.xib; sourceTree = "<group>"; };
 		FA8325A32247B1DE009FB562 /* MediaFilterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFilterOption.swift; sourceTree = "<group>"; };
 		FA8325A5224834A6009FB562 /* MediaListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListCellViewModel.swift; sourceTree = "<group>"; };
+		FA8325AD22486C65009FB562 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
+		FA8325AF22486CA2009FB562 /* AppContainerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContainerTests.swift; sourceTree = "<group>"; };
+		FA8325B122486D15009FB562 /* ItunesDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesDataSourceTests.swift; sourceTree = "<group>"; };
+		FA8325BB22487475009FB562 /* MediaListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewModelTests.swift; sourceTree = "<group>"; };
+		FA8325BD22487B26009FB562 /* MediaListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewControllerTests.swift; sourceTree = "<group>"; };
+		FA8325BF22487D3D009FB562 /* MediaListCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		FA8325C322487DDD009FB562 /* MediaDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewModelTests.swift; sourceTree = "<group>"; };
+		FA8325C522487DFB009FB562 /* MediaDetailTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailTableViewCellTests.swift; sourceTree = "<group>"; };
+		FA8325C722487E54009FB562 /* MediaDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +187,8 @@
 		FA8325272241559C009FB562 /* FunClub */ = {
 			isa = PBXGroup;
 			children = (
-				FA8325662241AC5B009FB562 /* API */,
 				FA83255B2241A6EA009FB562 /* Commons */,
+				FA8325662241AC5B009FB562 /* API */,
 				FA83254F224161CC009FB562 /* App */,
 				FA832548224160C2009FB562 /* Scenes */,
 				FA83252F224155A1009FB562 /* Assets.xcassets */,
@@ -185,7 +201,9 @@
 		FA83253C224155A1009FB562 /* FunClubTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA83253D224155A1009FB562 /* FunClubTests.swift */,
+				FA8325A722486B59009FB562 /* API */,
+				FA8325AA22486B96009FB562 /* App */,
+				FA8325A922486B90009FB562 /* Scenes */,
 				FA83253F224155A1009FB562 /* Info.plist */,
 			);
 			path = FunClubTests;
@@ -365,6 +383,108 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		FA8325A722486B59009FB562 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325A822486B7F009FB562 /* Network */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FA8325A822486B7F009FB562 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325B122486D15009FB562 /* ItunesDataSourceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA8325A922486B90009FB562 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325B3224873EC009FB562 /* MediaList */,
+				FA8325B4224873F6009FB562 /* MediaDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FA8325AA22486B96009FB562 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325AF22486CA2009FB562 /* AppContainerTests.swift */,
+				FA8325AD22486C65009FB562 /* AppRouterTests.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA8325B3224873EC009FB562 /* MediaList */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325B72248741E009FB562 /* ViewModel */,
+				FA8325B522487412009FB562 /* View */,
+			);
+			path = MediaList;
+			sourceTree = "<group>";
+		};
+		FA8325B4224873F6009FB562 /* MediaDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325BA22487432009FB562 /* ViewModel */,
+				FA8325B822487424009FB562 /* View */,
+			);
+			path = MediaDetail;
+			sourceTree = "<group>";
+		};
+		FA8325B522487412009FB562 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325BD22487B26009FB562 /* MediaListViewControllerTests.swift */,
+				FA8325B622487418009FB562 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA8325B622487418009FB562 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325BF22487D3D009FB562 /* MediaListCollectionViewCellTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA8325B72248741E009FB562 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325BB22487475009FB562 /* MediaListViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA8325B822487424009FB562 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325C722487E54009FB562 /* MediaDetailViewControllerTests.swift */,
+				FA8325B92248742B009FB562 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA8325B92248742B009FB562 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325C522487DFB009FB562 /* MediaDetailTableViewCellTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA8325BA22487432009FB562 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA8325C322487DDD009FB562 /* MediaDetailViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,6 +542,7 @@
 					};
 					FA832538224155A1009FB562 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = FA8325242241559C009FB562;
 					};
 				};
@@ -611,7 +732,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA83253E224155A1009FB562 /* FunClubTests.swift in Sources */,
+				FA8325B222486D15009FB562 /* ItunesDataSourceTests.swift in Sources */,
+				FA8325AE22486C65009FB562 /* AppRouterTests.swift in Sources */,
+				FA8325B022486CA3009FB562 /* AppContainerTests.swift in Sources */,
+				FA8325C622487DFB009FB562 /* MediaDetailTableViewCellTests.swift in Sources */,
+				FA8325C422487DDD009FB562 /* MediaDetailViewModelTests.swift in Sources */,
+				FA8325C822487E54009FB562 /* MediaDetailViewControllerTests.swift in Sources */,
+				FA8325BC22487475009FB562 /* MediaListViewModelTests.swift in Sources */,
+				FA8325BE22487B26009FB562 /* MediaListViewControllerTests.swift in Sources */,
+				FA8325C022487D3D009FB562 /* MediaListCollectionViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,7 +926,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z98T82KQNS;
 				INFOPLIST_FILE = FunClubTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -806,6 +937,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gamzerd.FunClubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunClub.app/FunClub";
@@ -818,7 +950,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z98T82KQNS;
 				INFOPLIST_FILE = FunClubTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

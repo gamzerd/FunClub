@@ -44,7 +44,7 @@
                         <outlet property="delegate" destination="-1" id="wRp-Rk-eo9"/>
                     </connections>
                 </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for musics, movies or podcasts from the above!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-RM-cXb">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for music, movies or podcasts from the above!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-RM-cXb">
                     <rect key="frame" x="16" y="272.5" width="343" height="142"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="343" id="9xB-zm-C1g"/>

@@ -101,7 +101,7 @@ final class MediaListViewModel: MediaListViewModelProtocol, DataSourceDelegatePr
             searchTimer?.invalidate()
             
             // wait for 0.3 seconds to fetch list
-            searchTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false, block: { (timer) in
+            searchTimer = Timer.scheduledTimer(withTimeInterval: 0, repeats: false, block: { (timer) in
                 self.fetchList()
             })
         }
